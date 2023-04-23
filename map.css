@@ -1,0 +1,290 @@
+h1.h1 {
+    position: absolute;
+    z-index: 1;
+    font-size: 30px;
+    color: #fff;
+    top: 55px;
+    left: 17px;
+    text-shadow: 1px 1px 5px #0000009c;
+}
+
+.mapboxgl-ctrl-group {
+    box-shadow: 1px 1px 5px 1px rgb(0 0 0 / 20%) !important;
+}
+			
+body { margin:0; padding:0;  }
+			p { font-size:1.1em;}
+#map { width:100%; height:800px; background-color: #949494;}
+	.mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
+			border-bottom-color: #004785;
+			}
+	.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+			border-top-color: #004785;
+			}
+	.mapboxgl-popup {
+			max-width: 275px;
+			font: 12px/20px;
+	}
+	.mapboxgl-popup-content {
+  			border: none;
+			width: 275px;
+			padding: 0px;
+			box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .12);
+	}
+	.bldgtitle {
+			color: #00794C;
+  			border-bottom: 3px solid #f8f8f8;
+			margin-top: 4px;
+			font-size: 1.7em;
+			font-weight: bold;
+	}
+	.mapboxgl-popup-close-button {
+			z-index:1000;
+			right: 10px;
+			font-size: 1.5em;
+			color: #ffffff;
+			width: 35px;
+			height: 35px;
+ 			background-color: rgba(0,0,0,0.1);	
+  			border-radius: 0 0 3px 3px;
+	}
+	.mapboxgl-popup-close-button:hover {
+ 			background-color: rgba(0,0,0,0.7);			
+	}
+	.mb-info {
+			padding: 10px 10px 0px;
+	}
+			<!--styling for testing w2 slider-->
+	* {box-sizing:border-box}
+
+	/* Slideshow container */
+	.slideshow-container {
+			max-width: 275px;
+			position: relative;
+			margin: auto;
+	}
+
+	/* Hide the images by default */
+	.mySlides {
+			display: none;
+	}
+
+	/* Next  previous buttons */
+	.prev, .next {
+			cursor: pointer;
+			position: absolute;
+			top: 50%;
+			width: auto;
+			margin-top: -22px;
+			padding: 16px;
+			color: white;
+			font-weight: bold;
+			font-size: 18px;
+			transition: 0.6s ease;
+			border-radius: 0 3px 3px 0;
+			user-select: none;
+			background-color: rgba(0,0,0,0.1);	
+	}
+	/* Position the "next button" to the right */
+	.next {
+  			right: 0;
+  			border-radius: 3px 0 0 3px;
+	}
+
+	/* On hover, add a black background color with a little bit see-through */
+	.prev:hover, .next:hover {
+			background-color: rgba(0,0,0,0.7);
+	}
+
+	.active {
+			display: block;
+	}
+	.active a{
+			color: #000000;
+	}
+	#menumain {
+			position: absolute;
+			z-index: 1;
+ 			top: 10px; 
+			left: 10px;
+			border-radius: 3px;
+			width: 200px;
+			text-align: center;
+			box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, .2);
+	}
+	#layermenu {
+			background: #fff;
+			z-index: 1;
+			width: 100%;
+			text-align: left;
+			position: relative;
+			display: none;
+	}
+	#layermenu a {
+			border-bottom: 1px solid #e3e5e6;
+			width: 90%;
+			margin: auto;
+			padding: 5px;
+	}
+	#flymenu {
+			background: #fff;
+			z-index: 1;
+			width: 100%;
+			text-align: center;
+			position: relative;
+			display: none;
+			color: #3175a0;
+	}
+	.bluebar {
+			border-top: 1px solid #00749C;
+	}
+	.bar1, .bar2, .bar3 {
+			width: 20px;
+			height: 3px;
+			background-color: #004785;
+			transition: 0.4s;
+			margin: 6px 0px;
+	}
+	.bar1 {
+			top: 6px;
+			left: 12px;
+	}
+	.bar2 {
+			top: 12px;
+			left: 12px;
+	}
+	.bar3 {
+			top: 18px;
+			left: 12px;
+	}
+	.mapmenuburger{
+			padding-left: 10px;
+			display: inline-block;
+			width: 20%;
+	}
+	.mapmenuhead{
+	 		width: 70%;
+			display: inline-block;
+	}
+	.mapmenuoption {
+			border-top: 1px solid #00749C;
+	}
+	.handcursor:hover {
+			cursor: pointer;
+	}
+	button#menuresources{
+			border-left: 1px solid #003a6d;
+   			border-right: 1px solid #003a6d;
+	}
+	.mapmenuitem {
+			width:33.3%; 
+			text-align:center; 
+			display:inline-block; 
+	}
+	.mapmenuitem:hover {
+			background-color: #015ba9;
+			cursor: pointer;
+	}
+	.mapmenuitem.active {
+			background-color: #00794C;
+	}
+	#mapmenumain {
+			display: none;
+			    background-color: #fff;
+	}
+	.resourceitem {
+			border-bottom: 1px dotted #e3e5e6;
+			width: 90%;
+			margin: auto;
+			padding: 5px;
+			cursor: pointer;
+			text-align: left;
+    		padding-left: 10px;
+	}
+	.layername {
+			padding-left: 10px;
+	}
+	.mapmenuheading {
+		text-align: left;
+		display: block;
+		margin-left: 13px;
+		margin-right: 13px;
+		padding-bottom: 7px;
+		line-height: 1;
+		padding-top: 10px;
+		font-size: 1.4em;
+		color: #000;
+		border-bottom: 1px solid #e3e5e6;
+	}
+.chkboxfont {
+    font-size: 1.25em;
+    line-height: 0px;
+    top: 2px;
+    position: relative;
+}
+			
+			.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 110px;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  top: 110%;
+  left: 80%;
+  margin-left: -60px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 100;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.mapmenuitem.active.tooltip .tooltiptext{
+visibility: hidden;
+}
+			
+			
+			
+@media only screen and (max-width: 767px){
+#map {
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+nav#menumain {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+.mapmenuitem {
+    background-color: #00569f;
+}
+.resourceitem {
+    width: 75%;
+    margin-left: 45px;
+    margin-right: 30px;
+    padding: 7px;
+}
+.mapmenuheading {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.tooltip .tooltiptext {
+    width: 133px;
+    padding: 5px 0;
+    top: -43%;
+    left: 45%;
+    line-height: 1;
+}
+}

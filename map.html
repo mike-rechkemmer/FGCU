@@ -1,0 +1,141 @@
+<!doctype html>
+   <head>
+      <title>Campus Map &amp; Directions | Florida Gulf Coast University</title>
+      <meta name="Description" content="FGCU campus map and general directions of buildings locations, places to eat and student-related activities.">           <link rel="canonical" href="https://www.fgcu.edu/campusmap/">
+      <meta charset="utf-8">
+      <link rel="icon" href="https://fgcucdn.fgcu.edu/favicon.ico" type="image/x-icon">
+      <link rel="stylesheet" href="https://use.typekit.net/snr4sjf.css"/>
+      <script src="https://fgcucdn.fgcu.edu/_resources/js/jquery-3.6.4.min.js"/>
+      
+      <meta property="og:image" content="https://www.fgcu.edu/_resources/images/social-preview.jpg">
+      <meta name="twitter:image" content="https://www.fgcu.edu/_resources/images/social-preview.jpg">
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="Campus Map &amp; Directions">
+      <meta property="og:description" content="FGCU campus map and general directions.">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta property="twitter:domain" content="fgcu.edu">
+      <meta name="twitter:title" content="Campus Map &amp; Directions">
+      <meta name="twitter:description" content="FGCU campus map and general directions.">
+      		
+      <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.css" rel="stylesheet">	
+      <link rel="stylesheet" href="https://fgcucdn.fgcu.edu/campusmap/files/map.css">
+      <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.js"></script>
+      <script src="https://fgcucdn.fgcu.edu/campusmap/files/map.js"></script>
+   </head>
+
+   <body>
+  
+   <main class="main-content true" role="main">
+         <article>
+            
+            <div id="map" style="margin: auto;">
+               			
+               <h1 class="h1">Campus Map</h1>
+               	
+               <nav id="menumain">
+               
+               <span>Map Options</span>
+            </div>
+                  
+                  <div>
+                     	<button id="menulayers" class="mapmenuitem tooltip" tabindex="0" role="button" aria-pressed="false" onclick="showlayers()"><span class="label">Layer Menu Toggle</span><span class="icon-buffer"></span><span class="tooltiptext">Layers</span></button>
+                     	<button id="menuresources" class="mapmenuitem tooltip" tabindex="0" role="button" aria-pressed="false" onclick="showmapmenu()"><span class="label">Resource Menu Toggle</span><span class="icon-online"></span><span class="tooltiptext">Resources</span></button>
+                     	<button id="menufly" class="mapmenuitem tooltip" tabindex="0" role="button" aria-pressed="false" onclick="showflymenu()"><span class="label">Off-Campus Menu Toggle</span><span class="icon-location"></span><span class="tooltiptext">Off Campus Locations</span></button>
+                     	</div>
+                  
+                  <div id="layermenu">
+                     <div id="layermenu1"><span class="mapmenuheading">General</span></div>
+                     <div id="layermenu2"><span class="mapmenuheading">Accessibilities</span></div>
+                  </div>
+                  
+                  <div id="mapmenumain"><span class="mapmenuheading">Campus Resources</span>
+                     
+                     <div class="resourceitem"><span><a aria-label="Accessible Map Tour" title="Accessible Map Tour" href="https://www.fgcu.edu/campusmap/ada" target="_blank">Accessible Map Tour</a></span></div>
+                     
+                     <div class="resourceitem"><span><a aria-label="Building Abbreviations" title="Building Abbreviations" href="https://www.fgcu.edu/campusreservations/facilities/buildingabbreviations" target="_blank">Building Abbreviations</a></span></div>
+                     
+                     <div class="resourceitem"><span><a aria-label="Dining Map" title="Dining Map" href="https://www.dineoncampus.com/fgcu/where-to-eat" target="_blank">Dining Map</a></span></div>
+                     
+                     <div class="resourceitem"><span><a aria-label="Driving Directions" title="Driving Directions" target="_blank" data-remote="false" data-toggle="modal" data-target="#modal-id-drivingdirections">Driving Directions</a></span></div>
+                     
+                     <div class="resourceitem"><span><a aria-label="Getting Around" title="Getting Around" href="https://www.fgcu.edu/studentlife/gettingaround" target="_blank">Getting Around</a></span></div>
+                     
+                     <div class="resourceitem"><span><a aria-label="Shuttle Map" title="Shuttle Map" href="https://livedisplay.tv/?f86a7171&amp;noask" target="_blank">Shuttle Map</a></span></div>
+                     
+                     <div class="resourceitem"><span><a aria-label="Trails Map" title="Trails Map" href="https://www.fgcu.edu/colloquium/files/campus-trail-map-ada-072519.pdf" target="_blank">Trails Map</a></span></div>
+                     
+                     <div class="resourceitem"><span><a aria-label="Visit/Tour Campus" title="Visit/Tour Campus" href="https://www.fgcu.edu/admissionsandaid/visitus/" target="_blank">Visit/Tour Campus</a></span></div>
+                     <span class="mapmenuheading">Printable Maps</span>
+                     
+                     <div class="resourceitem"><span><a aria-label="View/Print Campus Map" title="View/Print Campus Map" href="https://www.fgcu.edu/about/files/campus-map-for-welcome-center-81919.pdf" target="_blank">View/Print Campus Map</a></span></div>
+                     
+                     <div class="resourceitem"><span><a aria-label="Download Image of Campus Map" title="Download Image of Campus Map" href="https://www.fgcu.edu/about/images/Campus-Map.jpg" target="_blank">Download Image of Campus Map</a></span></div>
+                     </div>
+                  
+                  <div id="flymenu"> <span class="mapmenuheading">Off-Campus Locations</span>
+                     
+                     <div class="resourceitem flyto" id="Home" onclick="flyto()"><span>Campus Home</span></div>
+                     
+                     <div class="resourceitem flyto" id="BC" onclick="flyto()"><span>Buckingham Complex</span></div>
+                     
+                     <div class="resourceitem flyto" id="ETI" onclick="flyto()"><span>Emergent Technologies Institute</span></div>
+                     
+                     <div class="resourceitem flyto" id="Vester" onclick="flyto()"><span>Vester Marine Station</span></div>
+                     
+                     <div class="resourceitem flyto" id="WLV" onclick="flyto()"><span>West Lake Village</span></div>
+                     	</div>
+                  </nav>
+            </div>
+            
+            <div class="modal" id="modal-id-drivingdirections" role="dialog" aria-hidden="true" style="display: none;" tabindex="-1">
+               <div class="modal-dialog">
+                  <div class="modal-content">
+                     <div class="modal-header"><button type="button" class="close" data-dismiss="modal">×</button><p class="modal-title h4">Driving Directions</p>
+                     </div>
+                     <div class="modal-body">
+                        
+                        <p class="statement-text">From the north (via I-75)</p>
+                        
+                        <ul>
+                           
+                           <li>Take I-75 south to Alico Road at&nbsp;exit 128. (Tip: stay in right two lanes due to split
+                              highway)</li>
+                           
+                           <li>Go&nbsp;east (left) on Alico Road for half-mile.</li>
+                           
+                           <li>Go&nbsp;south (right) on Ben Hill Griffin Parkway for 2 miles.</li>
+                           
+                           <li>Turn left at the stoplight onto FGCU Boulevard at the main&nbsp;entrance&nbsp;(marked by&nbsp;FGCU
+                              tower&nbsp;and wall monument).</li>
+                           
+                           <li>Continue&nbsp;in right lane and stop at the information booth for a friendly greeting as
+                              well&nbsp;as assistance with parking passes and campus maps.</li>
+                           </ul>
+                        
+                        <p class="statement-text">From the south (via I-75)</p>
+                        
+                        <ul>
+                           
+                           <li>Take I-75 north to Corkscrew Road at&nbsp;Exit 123.</li>
+                           
+                           <li>Go&nbsp;east (right) onto Corkscrew Road for half-mile.</li>
+                           
+                           <li>Turn&nbsp;north (left) onto Ben Hill Griffin Parkway.</li>
+                           
+                           <li>Drive 3 miles to main entrance<span>&nbsp;</span><span>(marked by&nbsp;</span><span>FGCU<span>&nbsp;</span></span><span>tower</span><span>&nbsp;and<span>&nbsp;</span></span><span>wall monument)&nbsp;</span>and turn right onto FGCU Boulevard.</li>
+                           
+                           <li>Continue&nbsp;in right lane and stop at the information booth for a friendly greeting as
+                              well&nbsp;as assistance with parking passes and campus maps.</li>
+                           </ul>
+                        </div>
+                     <div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+                  </div>
+               </div>
+            </div>
+            		
+            										
+            	</article>
+      </main>
+   </body>
+   <footer></footer>
+</html>
